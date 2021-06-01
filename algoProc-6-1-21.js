@@ -54,3 +54,51 @@ console.log(getSum(a1, b1));
 console.log(getSum(a2, b2));
 console.log(getSum(a3, b3));
 console.log(getSum(a4, b4));
+
+// Given an array of ones and zeroes, convert the equivalent binary value to an integer.
+
+// Eg: [0, 0, 0, 1] is treated as 0001 which is the binary representation of 1.
+
+// Examples:
+// Testing: [0, 0, 0, 1] ==> 1
+//           8  4  2  1
+// Testing: [0, 0, 1, 0] ==> 2
+//           8  4  2  1
+// Testing: [0, 1, 0, 1] ==> 5
+//           8  4  2  1
+// Testing: [1, 0, 0, 1] ==> 9
+//           8  4  2  1
+// Testing: [0, 0, 1, 0] ==> 2
+//           8  4  2  1
+// Testing: [0, 1, 1, 0] ==> 6
+//           8  4  2  1
+// Testing: [1, 1, 1, 1] ==> 15
+//           8  4  2  1
+// Testing: [1, 0, 1, 1] ==> 11
+//           8  4  2  1
+
+const arr1 = [0, 0, 0, 1];
+const arr2 = [0, 0, 1, 0];
+const arr3 = [0, 1, 0, 1];
+const arr4 = [1, 0, 0, 1];
+const arr5 = [1, 1, 0, 1];
+const arr6 = [1, 1, 1, 0, 0, 0, 1];
+
+const binaryArrayToNumber = (arr) => {
+  let sum = 0;
+  let adder = 1;
+  for (let i = arr.length - 1; i >= 0; i--) {
+    if (arr[i] == 1) {
+      sum += adder;
+    }
+    adder *= 2;
+  }
+  return sum;
+};
+
+console.log(binaryArrayToNumber(arr1));
+console.log(binaryArrayToNumber(arr2));
+console.log(binaryArrayToNumber(arr3));
+console.log(binaryArrayToNumber(arr4));
+console.log(binaryArrayToNumber(arr5));
+console.log(binaryArrayToNumber(arr6));
