@@ -77,7 +77,6 @@ console.log(invertObj(obj1));
  */
 
 //---------------------------------------------------------------- ALGO 3 ---------------------------------------------------------------------
-
 /* 
   Optional chaining is a newer syntax that can help with this problem in general (not necessarily intended to be used here): 
     https://levelup.gitconnected.com/new-javascript-features-in-2019-optional-chaining-null-coalescing-a7fd38f4ef2d
